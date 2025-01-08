@@ -53,7 +53,7 @@ export default function Hero() {
             Welcome to My Portfolio
           </h2>
           <p className="mt-3 max-w-md mx-auto text-xl sm:text-2xl md:mt-5 md:max-w-3xl">
-            Showcasing my best projects and skills in web development.
+          Highlighting my top web development projects and demonstrating my expertise in building dynamic, user-friendly applications. Explore my portfolio to see how I transform ideas into seamless, high-performance digital experiences
           </p>
           <div className="mt-10">
             <a 
