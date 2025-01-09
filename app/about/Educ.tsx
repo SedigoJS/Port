@@ -38,7 +38,7 @@ const Educ: React.FC<EducProps> = ({ hoveredSection, setHoveredSection }) => {
       <h1
         className={`${
           hoveredSection ? "text-white" : ""
-        } dark:text-white text-3xl sm:text-4xl md:text-4xl font-extrabold text-center mb-8 sm:mb-12`}
+        } text-black dark:text-white text-3xl sm:text-4xl md:text-4xl font-extrabold text-center mb-8 sm:mb-12`}
       >
         Educational Background
       </h1>
@@ -60,10 +60,10 @@ const Educ: React.FC<EducProps> = ({ hoveredSection, setHoveredSection }) => {
                 className="rounded-full"
               />
             </div>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-2">
+            <h2 className="text-black dark:text-white text-xl sm:text-2xl font-semibold mb-2">
               {edu.level}
             </h2>
-            <p className="text-base sm:text-lg">{edu.school}</p>
+            <p className="text-black dark:text-white text-base sm:text-lg">{edu.school}</p>
             <p className="text-sm text-gray-600 dark:text-gray-200 mt-2">
               {edu.years}
             </p>

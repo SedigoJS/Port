@@ -55,8 +55,8 @@ const ProjectPresentation: React.FC = () => {
   return (
     <Card className="w-full max-w-5xl mx-auto pt-10 h-full">
       <CardHeader>
-        <CardTitle className="text-3xl font-bold dark:text-white">{project.title}</CardTitle>
-        <CardDescription className="text-lg mt-2 dark:text-white">{project.description}</CardDescription>
+        <CardTitle className="text-3xl font-bold text-black dark:text-white">{project.title}</CardTitle>
+        <CardDescription className="text-lg mt-2 text-black dark:text-white">{project.description}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="relative">

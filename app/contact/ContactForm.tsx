@@ -52,7 +52,7 @@ export default function PortfolioContact() {
   return (
     <footer className="bg-[url('/white_bg.png')] bg-fixed bg-cover bg-no-repeat dark:bg-gradient-to-b from-gray-900 to-black dark:text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className='max-w-7xl mx-auto'>
-        <h2 className={`text-3xl font-bold text-center mb-12 transition-all duration-700 ease-linear ${move ? "translate-x-0 opacity-100" : "-translate-y-10 opacity-0"}`}>Get in Touch</h2>
+        <h2 className={`text-black dark:text-white text-3xl font-bold text-center mb-12 transition-all duration-700 ease-linear ${move ? "translate-x-0 opacity-100" : "-translate-y-10 opacity-0"}`}>Get in Touch</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="w-full">
             <div className={`w-full max-w-md mx-auto space-y-4 transition-all duration-700 ease-linear ${move ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
@@ -92,7 +92,7 @@ export default function PortfolioContact() {
                 width={208}
                 height={208}
               />
-              <h3 className="text-2xl font-bold mb-2">Joshua Sedigo</h3>
+              <h3 className="text-black dark:text-white text-2xl font-bold mb-2">Joshua Sedigo</h3>
               <p className="text-gray-700 dark:text-gray-400 mb-6">Fullstack Web Developer</p>
               <div className="flex space-x-4">
                 {contactItems.map((item, index) => (
