@@ -5,50 +5,7 @@ import Image from "next/image";
 
 export default function PortfolioContact() {
   const [move, setMove] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitResult, setSubmitResult] = useState<string | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitResult(null);
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setSubmitResult('Thank you for your message! I will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setSubmitResult('There was an error sending your message. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setSubmitResult('There was an error sending your message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setMove(true);
@@ -93,78 +50,12 @@ export default function PortfolioContact() {
   ];
 
   return (
-    <footer className="bg-[url('/white_bg.png')] bg-cover bg-no-repeat dark:bg-gradient-to-b from-gray-900 to-black dark:text-white py-16 px-4 sm:px-6 lg:px-8">
-      <section className="pb-10 md:pb-44">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-8">Contact Me</h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              ></textarea>
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </div>
-            {submitResult && (
-              <div className={`mt-4 text-sm ${submitResult.includes('error') ? 'text-red-600' : 'text-green-600'}`}>
-                {submitResult}
-              </div>
-            )}
-          </form>
-        </div>
-      </section>
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+    <footer className="bg-[url('/white_bg.png')] bg-fixed bg-cover bg-no-repeat dark:bg-gradient-to-b from-gray-900 to-black dark:text-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className='max-w-7xl mx-auto'>
+        <h2 className={`text-3xl font-bold text-center mb-12 transition-all duration-700 ease-linear ${move ? "translate-x-0 opacity-100" : "-translate-y-10 opacity-0"}`}>Get in Touch</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="w-full">
-            <div
-              className={`w-full max-w-md mx-auto space-y-4 transition-all duration-700 ease-linear ${
-                move ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-              }`}
-            >
+            <div className={`w-full max-w-md mx-auto space-y-4 transition-all duration-700 ease-linear ${move ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
               {contactItems.map((item, index) => (
                 <a
                   key={index}

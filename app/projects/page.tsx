@@ -12,7 +12,7 @@ const projects = [
     description: 'An online learning management system where teachers or administrators can create and manage course modules, lessons, and quizzes for students. The platform allows students to access educational content, complete quizzes, and track their progress.',
     image: '/p1.png',
     github: 'https://github.com/SedigoJS/LMS',
-    live: 'https://example.com',
+    live: '/projects/p1',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = [
     description: 'A content management system (CMS) website where users can submit entries, and an admin interface is used to review and validate these submissions. The admin site offers tools for reviewing, approving, or rejecting entries based on predefined criteria, ensuring that content meets the necessary standards. Once validated, the approved entries are forwarded to the brand responsible for awarding prizes.',
     image: '/p2.png',
     github: 'https://github.com/SedigoJS/Bini-Con',
-    live: 'https://example.com',
+    live: '/projects/p2',
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const projects = [
     description: 'A weather dashboard integrates the OpenWeatherMap API to provide real-time weather updates, including current conditions such as temperature, humidity, and forecasts, alongside weather-related icons. Users can check the weather for their location or any city they choose. Additionally, the dashboard incorporates a music API, like Spotify or Apple Music.',
     image: '/p3.png',
     github: 'https://github.com/SedigoJS/CloudCast',
-    live: 'https://example.com',
+    live: 'https://cloudcast-five.vercel.app',
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const projects = [
     description: 'A tool similar to a Google Spin Wheel, allowing users to upload entries through files, such as CSVs, and randomly select winners. Users can easily input a list of participants or entries from a file, and the system randomly selects one or more winners from the list.',
     image: '/p4.png',
     github: 'https://github.com/SedigoJS/Randomizer',
-    live: 'https://example.com',
+    live: '/projects/p4',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function ProjectsGrid() {
                   </Link>
                   <Link href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200">
                     <ExternalLink className="w-5 h-5 mr-1" />
-                    {project.id === 3 ? 'Go to Project' : 'Live Demo'}
+                    {project.id === 3 ? 'Go to Project' : 'Slide Show'}
                   </Link>
                 </div>
               </div>

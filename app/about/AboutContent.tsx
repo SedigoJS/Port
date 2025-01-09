@@ -4,7 +4,7 @@ const skills = ['HTML', 'CSS', 'React', 'Tailwind CSS', 'Node.js', 'Next.js', 'T
 
 export default function AboutContent() {
   return (
-    <section className="bg-[url('/white_bg.png')] bg-cover bg-no-repeat py-20 dark:bg-none dark:bg-gray-800">
+    <section className="py-20 dark:bg-none dark:bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-8">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">

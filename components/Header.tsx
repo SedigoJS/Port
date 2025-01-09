@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     if (darkMode) {
@@ -26,6 +28,7 @@ export default function Header() {
 
   const scrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    router.push('/');
   
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
