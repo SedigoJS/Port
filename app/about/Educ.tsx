@@ -34,7 +34,7 @@ const Educ: React.FC<EducProps> = ({ hoveredSection, setHoveredSection }) => {
   ];
 
   return (
-    <div className="dark:bg-none dark:bg-gray-800 relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
+    <div className="dark:bg-none dark:bg-gray-800 relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8 py-10 sm:py-10">
       <h1
         className={`${
           hoveredSection ? "text-white" : ""
