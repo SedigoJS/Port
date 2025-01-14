@@ -23,6 +23,8 @@ const sampleProject: ProjectData = {
   images: [
     { src: "/p2-1.png", alt: "pic" },
     { src: "/p2-2.png", alt: "pic" },
+    { src: "/p2-7.png", alt: "pic" },
+    { src: "/p2-8.png", alt: "pic" },
     { src: "/p2-5.png", alt: "pic" },
     { src: "/p2-3.png", alt: "pic" },
     { src: "/p2-4.png", alt: "pic" },

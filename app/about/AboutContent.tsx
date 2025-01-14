@@ -22,10 +22,10 @@ export default function AboutContent() {
             <div className=" w-full md:w-2/3 p-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-6 h-6 text-blue-500" />
+                  <Mail className="size-9 sm:size-6 text-blue-500" />
                   <div>
                     <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</p>
-                    <p className="text-base text-gray-900 dark:text-white">sedigojs@gmail.com</p>
+                    <p className="text-base text-gray-900 dark:text-white">sedigojs<wbr />@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -36,7 +36,7 @@ export default function AboutContent() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-6 h-6 text-red-500" />
+                  <MapPin className="sm:size-12 md:size-12 size-20 text-red-500" />
                   <div>
                     <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</p>
                     <p className="text-base text-gray-900 dark:text-white">#308 GSIS Rd. GB1 San Mateo, Rizal 1850 Philippines</p>
